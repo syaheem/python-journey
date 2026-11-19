@@ -10,7 +10,7 @@ def comment(score):
     elif score >= 20:
         return"You almost fail miserably"
     elif score > 0:
-            return "You fail miserably"
+        return "You fail miserably"
     else:
         return "You dont even try"
     
@@ -18,24 +18,33 @@ def comment(score):
    
     
 
-
+subjects = []
 
 total_grade = 0
 counter=0
 while True:
-    subject=(input("Insert the subject: "))
-    if subject.lower()=="exit": 
+    subject = {}
+    subject["name"]=(input("Insert the subject: "))
+    if subject["name"].lower()=="exit": 
         break
-    grade = float(input("Insert your grade for  "+subject+":"))
-    if grade<0 or grade>100:
+    subject["grade"] = float(input("Insert your grade for  "+ subject["name"] +":"))
+    if subject["grade"] <0 or subject["grade"] >100:
         print("Error:Invalid grade")
     else:
-        total_grade += grade
+        total_grade += subject["grade"]
         counter += 1
+        subjects.append(subject)
+    
 if counter>0:
     average=total_grade/counter
-    print(f"Your total grade is:  {average:.2f}")
+    print(f"Your average grade is:  {average:.2f}")
     print(comment(average))
+    highest = subjects[0]
+    for s in subjects:
+        if s["grade"]>highest["grade"]:
+            highest = s
+    
 else:
     print("No grades were entered")
-   
+for subject in subjects:
+    print(f"{subject['name']}  -> {subject['grade']:.2f}")
