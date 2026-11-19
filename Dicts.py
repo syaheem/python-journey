@@ -1,10 +1,10 @@
 students =[ {
-    "name" : "Syaheem",
+    "name" : "Abu",
     "age" : 22 , 
-    "email" : "syaheem04@gmail.com"
+    "email" : "student04@gmail.com"
 }]
 
-students[0]["phone"] = "0196832580"
+students[0]["phone"] = "000000000"
 while True:
    student = {}
    student["name"] = input("Enter your name: ")
