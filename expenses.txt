@@ -1,0 +1,5 @@
+Debt,300.00,car
+Grocery,300.00,Poultry
+Subscription,30.00,netflix
+Grocery,30.00,egg
+Debt,34.00,Credit Card
