@@ -1,4 +1,4 @@
-# Week 2 - Day 1: camelCase to snake_case Converter
+# Week 2 - Lesson 1: camelCase to snake_case Converter
 # 
 # Goal:
 # Take user input in camelCase (e.g., 'preferredFirstName')
