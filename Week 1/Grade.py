@@ -43,6 +43,7 @@ if counter>0:
     for s in subjects:
         if s["grade"]>highest["grade"]:
             highest = s
+    print(f"Best subject: {highest['name']} ({highest['grade']:.2f})")
     
 else:
     print("No grades were entered")
